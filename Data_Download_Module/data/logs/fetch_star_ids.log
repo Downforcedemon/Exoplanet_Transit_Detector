@@ -1,0 +1,84 @@
+2024-12-26 00:09:36,838 - DEBUG - Loaded configuration: {'catalog': 'TIC', 'query_parameters': {'brightness_range': [0, 6]}, 'output_path': '/home/sm/Projects/Exoplanet_Transit_Detector/Data_Download_Module/inputs/star_ids.txt', 'log_file': '/home/sm/Projects/Exoplanet_Transit_Detector/Data_Download_Module/data/logs/fetch_star_ids.log', 'num_star_ids': 1}
+2024-12-26 00:09:36,838 - DEBUG - Fetching star IDs from MAST catalog...
+2024-12-26 00:09:36,838 - DEBUG - Starting query...
+2024-12-26 00:09:36,840 - DEBUG - Starting new HTTPS connection (1): mast.stsci.edu:443
+2024-12-26 00:09:37,263 - DEBUG - https://mast.stsci.edu:443 "POST /portal/Mashup/Mashup.asmx/columnsconfig HTTP/11" 200 None
+2024-12-26 00:09:37,387 - DEBUG - https://mast.stsci.edu:443 "POST /api/v0/invoke HTTP/11" 200 None
+2024-12-26 00:09:42,085 - DEBUG - https://mast.stsci.edu:443 "POST /api/v0/invoke HTTP/11" 200 None
+2024-12-26 00:10:28,624 - DEBUG - Query completed in 51.79 seconds.
+2024-12-26 00:10:28,638 - DEBUG - Sample of fetched star IDs:     ID   
+---------
+378536210
+319568906
+ 88532487
+357126143
+ 84441541
+2024-12-26 00:10:28,639 - DEBUG - Successfully fetched 14252 stars from TIC.
+2024-12-26 00:10:28,639 - DEBUG - Saving star IDs to file...
+2024-12-26 00:10:28,639 - DEBUG - Saving star IDs to file...
+2024-12-26 00:10:28,652 - DEBUG - Saving star ID: TIC 378536210
+2024-12-26 00:10:28,653 - DEBUG - Successfully saved 1 star IDs to /home/sm/Projects/Exoplanet_Transit_Detector/Data_Download_Module/inputs/star_ids.txt.
+2024-12-26 00:10:28,653 - DEBUG - Process complete.
+2024-12-26 00:25:33,103 - DEBUG - Loaded configuration: {'catalog': 'TIC', 'query_parameters': {'brightness_range': [0, 6]}, 'output_path': '/home/sm/Projects/Exoplanet_Transit_Detector/Data_Download_Module/inputs/star_ids.txt', 'log_file': '/home/sm/Projects/Exoplanet_Transit_Detector/Data_Download_Module/data/logs/fetch_star_ids.log', 'num_star_ids': 1}
+2024-12-26 00:25:33,103 - DEBUG - Fetching star IDs from MAST catalog...
+2024-12-26 00:25:33,103 - DEBUG - Starting query...
+2024-12-26 00:25:33,106 - DEBUG - Starting new HTTPS connection (1): mast.stsci.edu:443
+2024-12-26 00:25:33,553 - DEBUG - https://mast.stsci.edu:443 "POST /portal/Mashup/Mashup.asmx/columnsconfig HTTP/11" 200 None
+2024-12-26 00:25:33,802 - DEBUG - https://mast.stsci.edu:443 "POST /api/v0/invoke HTTP/11" 200 None
+2024-12-26 00:25:38,702 - DEBUG - https://mast.stsci.edu:443 "POST /api/v0/invoke HTTP/11" 200 None
+2024-12-26 00:26:11,421 - DEBUG - Query completed in 38.32 seconds.
+2024-12-26 00:26:11,437 - DEBUG - Sample of fetched star IDs:     ID   
+---------
+ 84441541
+456366842
+330018518
+ 96861698
+378536210
+2024-12-26 00:26:11,437 - DEBUG - Successfully fetched 14252 stars from TIC.
+2024-12-26 00:26:11,437 - DEBUG - Saving star IDs to file...
+2024-12-26 00:26:11,437 - DEBUG - Saving star IDs to file...
+2024-12-26 00:26:11,450 - DEBUG - Saving star ID: TIC 84441541
+2024-12-26 00:26:11,450 - DEBUG - Successfully saved 1 star IDs to /home/sm/Projects/Exoplanet_Transit_Detector/Data_Download_Module/inputs/star_ids.txt.
+2024-12-26 00:26:11,451 - DEBUG - Process complete.
+2024-12-26 00:28:53,684 - DEBUG - Loaded configuration: {'catalog': 'TIC', 'query_parameters': {'brightness_range': [0, 6]}, 'output_path': '/home/sm/Projects/Exoplanet_Transit_Detector/Data_Download_Module/inputs/star_ids.txt', 'log_file': '/home/sm/Projects/Exoplanet_Transit_Detector/Data_Download_Module/data/logs/fetch_star_ids.log', 'num_star_ids': 1}
+2024-12-26 00:28:53,684 - DEBUG - Fetching star IDs from MAST catalog...
+2024-12-26 00:28:53,685 - DEBUG - Starting query...
+2024-12-26 00:28:53,692 - DEBUG - Starting new HTTPS connection (1): mast.stsci.edu:443
+2024-12-26 00:28:54,179 - DEBUG - https://mast.stsci.edu:443 "POST /portal/Mashup/Mashup.asmx/columnsconfig HTTP/11" 200 None
+2024-12-26 00:28:54,319 - DEBUG - https://mast.stsci.edu:443 "POST /api/v0/invoke HTTP/11" 200 None
+2024-12-26 00:28:56,251 - DEBUG - https://mast.stsci.edu:443 "POST /api/v0/invoke HTTP/11" 200 None
+2024-12-26 00:29:04,871 - DEBUG - Query completed in 11.19 seconds.
+2024-12-26 00:29:04,889 - DEBUG - Sample of fetched star IDs:     ID   
+---------
+ 84441541
+456366842
+330018518
+ 96861698
+378536210
+2024-12-26 00:29:04,889 - DEBUG - Successfully fetched 14252 stars from TIC.
+2024-12-26 00:29:04,889 - DEBUG - Saving star IDs to file...
+2024-12-26 00:29:04,889 - DEBUG - Saving star IDs to file...
+2024-12-26 00:29:04,903 - DEBUG - Saving star ID: TIC 84441541
+2024-12-26 00:29:04,903 - DEBUG - Successfully saved 1 star IDs to /home/sm/Projects/Exoplanet_Transit_Detector/Data_Download_Module/inputs/star_ids.txt.
+2024-12-26 00:29:04,903 - DEBUG - Process complete.
+2024-12-26 00:49:54,734 - DEBUG - Loaded configuration: {'catalog': 'TIC', 'query_parameters': {'brightness_range': [0, 6]}, 'output_path': '/home/sm/Projects/Exoplanet_Transit_Detector/Data_Download_Module/inputs/star_ids.txt', 'log_file': '/home/sm/Projects/Exoplanet_Transit_Detector/Data_Download_Module/data/logs/fetch_star_ids.log', 'num_star_ids': 1}
+2024-12-26 00:49:54,734 - DEBUG - Fetching star IDs from MAST catalog...
+2024-12-26 00:49:54,734 - DEBUG - Starting query...
+2024-12-26 00:49:54,738 - DEBUG - Starting new HTTPS connection (1): mast.stsci.edu:443
+2024-12-26 00:49:55,163 - DEBUG - https://mast.stsci.edu:443 "POST /portal/Mashup/Mashup.asmx/columnsconfig HTTP/11" 200 None
+2024-12-26 00:49:55,305 - DEBUG - https://mast.stsci.edu:443 "POST /api/v0/invoke HTTP/11" 200 None
+2024-12-26 00:50:00,255 - DEBUG - https://mast.stsci.edu:443 "POST /api/v0/invoke HTTP/11" 200 None
+2024-12-26 00:50:08,160 - DEBUG - Query completed in 13.43 seconds.
+2024-12-26 00:50:08,174 - DEBUG - Sample of fetched star IDs:     ID   
+---------
+ 90702417
+198257590
+174671483
+220565276
+290194406
+2024-12-26 00:50:08,175 - DEBUG - Successfully fetched 14252 stars from TIC.
+2024-12-26 00:50:08,175 - DEBUG - Saving star IDs to file...
+2024-12-26 00:50:08,175 - DEBUG - Saving star IDs to file...
+2024-12-26 00:50:08,188 - DEBUG - Saving star ID: TIC 90702417
+2024-12-26 00:50:08,188 - DEBUG - Successfully saved 1 star IDs to /home/sm/Projects/Exoplanet_Transit_Detector/Data_Download_Module/inputs/star_ids.txt.
+2024-12-26 00:50:08,188 - DEBUG - Process complete.
