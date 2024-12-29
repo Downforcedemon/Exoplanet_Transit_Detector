@@ -1,0 +1,19 @@
+{
+  "catalog": "TIC",
+  "query_parameters": {
+      "brightness_range": [0, 6]
+  },
+  "output_path": "Data_Download_Module/inputs/star_ids.txt",
+  "fetch_star_ids_log": "Data_Download_Module/data/logs/fetch_star_ids.log",
+  "num_star_ids": 1,
+  "raw_data_dir": "Data_Download_Module/data/raw",
+  "star_ids_file": "Data_Download_Module/inputs/star_ids.txt",
+  "fetch_star_data_log": "Data_Download_Module/data/logs/fetch_star_data.log",
+  "process_lightcurve": {
+      "process_lightcurve_log": "Process_Light_Curve_Module/logs/process_lightcurve_logs.log",
+      "processed_data_dir": "Process_Light_Curve_Module/data/processed",
+      "noise_removal_tolerance": 0.01,
+      "invalid_data_masking": true
+  },
+  "process_lightcurve_script": "Process_Light_Curve_Module/scripts/process_lightcurve.py"
+}
