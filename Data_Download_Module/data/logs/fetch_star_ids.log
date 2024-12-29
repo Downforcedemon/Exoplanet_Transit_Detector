@@ -1,21 +1,21 @@
-2024-12-28 19:11:30,306 - DEBUG - Logging setup complete.
-2024-12-28 19:11:30,307 - DEBUG - Fetching star IDs from MAST catalog...
-2024-12-28 19:11:30,307 - DEBUG - Starting query...
-2024-12-28 19:11:30,309 - DEBUG - Starting new HTTPS connection (1): mast.stsci.edu:443
-2024-12-28 19:11:30,923 - DEBUG - https://mast.stsci.edu:443 "POST /portal/Mashup/Mashup.asmx/columnsconfig HTTP/11" 200 None
-2024-12-28 19:11:31,075 - DEBUG - https://mast.stsci.edu:443 "POST /api/v0/invoke HTTP/11" 200 None
-2024-12-28 19:11:35,940 - DEBUG - https://mast.stsci.edu:443 "POST /api/v0/invoke HTTP/11" 200 None
-2024-12-28 19:11:46,591 - DEBUG - Query completed in 16.28 seconds.
-2024-12-28 19:11:46,613 - DEBUG - Sample of fetched star IDs:     ID   
+2024-12-29 10:58:17,520 - DEBUG - Logging setup complete.
+2024-12-29 10:58:17,520 - DEBUG - Fetching star IDs from MAST catalog...
+2024-12-29 10:58:17,520 - DEBUG - Starting query...
+2024-12-29 10:58:17,523 - DEBUG - Starting new HTTPS connection (1): mast.stsci.edu:443
+2024-12-29 10:58:18,069 - DEBUG - https://mast.stsci.edu:443 "POST /portal/Mashup/Mashup.asmx/columnsconfig HTTP/11" 200 None
+2024-12-29 10:58:18,626 - DEBUG - https://mast.stsci.edu:443 "POST /api/v0/invoke HTTP/11" 200 None
+2024-12-29 10:58:27,871 - DEBUG - https://mast.stsci.edu:443 "POST /api/v0/invoke HTTP/11" 200 None
+2024-12-29 10:58:44,614 - DEBUG - Query completed in 27.09 seconds.
+2024-12-29 10:58:44,643 - DEBUG - Sample of fetched star IDs:     ID   
 ---------
-269400564
- 29055294
-198257590
-290194406
-220565276
-2024-12-28 19:11:46,614 - DEBUG - Successfully fetched 14252 stars from TIC.
-2024-12-28 19:11:46,614 - DEBUG - Saving star IDs to file...
-2024-12-28 19:11:46,643 - DEBUG - Saving star ID: TIC 269400564
-2024-12-28 19:11:46,644 - DEBUG - Star IDs saved successfully.
-2024-12-28 19:11:46,645 - DEBUG - Triggering fetch_star_data.py...
-2024-12-28 19:11:56,516 - DEBUG - Successfully triggered fetch_star_data.py
+378536210
+338995234
+ 77108968
+ 96861698
+316934780
+2024-12-29 10:58:44,643 - DEBUG - Successfully fetched 14252 stars from TIC.
+2024-12-29 10:58:44,643 - DEBUG - Saving star IDs to file...
+2024-12-29 10:58:44,660 - DEBUG - Saving star ID: TIC 378536210
+2024-12-29 10:58:44,661 - DEBUG - Star IDs saved successfully.
+2024-12-29 10:58:44,661 - DEBUG - Triggering fetch_star_data.py...
+2024-12-29 10:58:54,114 - DEBUG - Successfully triggered fetch_star_data.py

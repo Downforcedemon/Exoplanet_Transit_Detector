@@ -1,46 +1,46 @@
-2024-12-28 19:11:49,241 - DEBUG - Logging setup complete.
-2024-12-28 19:11:49,242 - DEBUG - Starting to process 1 stars...
-2024-12-28 19:11:49,242 - DEBUG - Processing star_id: TIC 269400564
-2024-12-28 19:11:49,242 - WARNING - /home/sm/Projects/Exoplanet_Transit_Detector/Data_Download_Module/scripts/fetch_star_data.py:73: LightkurveDeprecationWarning: The search_lightcurvefile function is deprecated and may be removed in a future version.
+2024-12-29 10:58:49,160 - DEBUG - Logging setup complete.
+2024-12-29 10:58:49,160 - DEBUG - Starting to process 1 stars...
+2024-12-29 10:58:49,160 - DEBUG - Processing star_id: TIC 378536210
+2024-12-29 10:58:49,161 - WARNING - /home/sm/Projects/Exoplanet_Transit_Detector/Data_Download_Module/scripts/fetch_star_data.py:73: LightkurveDeprecationWarning: The search_lightcurvefile function is deprecated and may be removed in a future version.
         Use search_lightcurve() instead.
   search_result = lk.search_lightcurvefile(star_id, mission='TESS')
 
-2024-12-28 19:11:49,454 - DEBUG - Started querying MAST for observations with the exact target_name='269400564'.
-2024-12-28 19:11:49,456 - DEBUG - Starting new HTTPS connection (1): mast.stsci.edu:443
-2024-12-28 19:11:50,243 - DEBUG - https://mast.stsci.edu:443 "POST /portal/Mashup/Mashup.asmx/columnsconfig HTTP/11" 200 None
-2024-12-28 19:11:50,395 - DEBUG - https://mast.stsci.edu:443 "POST /api/v0/invoke HTTP/11" 200 None
-2024-12-28 19:11:50,572 - DEBUG - MAST found 19 observations. Now querying MAST for the corresponding data products.
-2024-12-28 19:11:50,678 - DEBUG - https://mast.stsci.edu:443 "POST /portal/Mashup/Mashup.asmx/columnsconfig HTTP/11" 200 None
-2024-12-28 19:11:50,840 - DEBUG - https://mast.stsci.edu:443 "POST /api/v0/invoke HTTP/11" 200 None
-2024-12-28 19:11:51,013 - DEBUG - MAST found 19 matching data products.
-2024-12-28 19:11:51,048 - WARNING - /home/sm/Projects/Exoplanet_Transit_Detector/venv/lib/python3.12/site-packages/lightkurve/search.py:424: LightkurveWarning: Warning: 19 files available to download. Only the first file has been downloaded. Please use `download_all()` or specify additional criteria (e.g. quarter, campaign, or sector) to limit your search.
+2024-12-29 10:58:49,344 - DEBUG - Started querying MAST for observations with the exact target_name='378536210'.
+2024-12-29 10:58:49,346 - DEBUG - Starting new HTTPS connection (1): mast.stsci.edu:443
+2024-12-29 10:58:49,912 - DEBUG - https://mast.stsci.edu:443 "POST /portal/Mashup/Mashup.asmx/columnsconfig HTTP/11" 200 None
+2024-12-29 10:58:50,040 - DEBUG - https://mast.stsci.edu:443 "POST /api/v0/invoke HTTP/11" 200 None
+2024-12-29 10:58:50,138 - DEBUG - MAST found 19 observations. Now querying MAST for the corresponding data products.
+2024-12-29 10:58:50,239 - DEBUG - https://mast.stsci.edu:443 "POST /portal/Mashup/Mashup.asmx/columnsconfig HTTP/11" 200 None
+2024-12-29 10:58:50,883 - DEBUG - https://mast.stsci.edu:443 "POST /api/v0/invoke HTTP/11" 200 None
+2024-12-29 10:58:51,167 - DEBUG - MAST found 16 matching data products.
+2024-12-29 10:58:51,192 - WARNING - /home/sm/Projects/Exoplanet_Transit_Detector/venv/lib/python3.12/site-packages/lightkurve/search.py:424: LightkurveWarning: Warning: 16 files available to download. Only the first file has been downloaded. Please use `download_all()` or specify additional criteria (e.g. quarter, campaign, or sector) to limit your search.
   warnings.warn(
 
-2024-12-28 19:11:51,065 - DEBUG - Started downloading mast:TESS/product/tess2019058134432-s0009-0000000269400564-0139-s_lc.fits.
-2024-12-28 19:11:51,265 - DEBUG - https://mast.stsci.edu:443 "HEAD /api/v0.1/Download/file?uri=mast:TESS/product/tess2019058134432-s0009-0000000269400564-0139-s_lc.fits HTTP/11" 200 0
-2024-12-28 19:11:51,266 - DEBUG - Starting new HTTPS connection (2): mast.stsci.edu:443
-2024-12-28 19:11:51,660 - DEBUG - https://mast.stsci.edu:443 "GET /api/v0.1/Download/file?uri=mast:TESS/product/tess2019058134432-s0009-0000000269400564-0139-s_lc.fits HTTP/11" 200 1848960
-2024-12-28 19:11:52,289 - DEBUG - Finished downloading.
-2024-12-28 19:11:52,290 - DEBUG - Opening /home/sm/.lightkurve/cache/mastDownload/TESS/tess2019058134432-s0009-0000000269400564-0139-s/tess2019058134432-s0009-0000000269400564-0139-s_lc.fits.
-2024-12-28 19:11:52,302 - DEBUG - Detected filetype: 'TessLightCurve'.
-2024-12-28 19:11:52,411 - INFO - 1% (197/17337) of the cadences will be ignored due to the quality mask (quality_bitmask=175).
-2024-12-28 19:11:52,552 - WARNING - The unit 'electron / s' could not be saved in native FITS format and hence will be lost to non-astropy fits readers. Within astropy, the unit can roundtrip using QTable, though one has to enable the unit before reading.
-2024-12-28 19:11:52,573 - WARNING - The unit 'electron / s' could not be saved in native FITS format and hence will be lost to non-astropy fits readers. Within astropy, the unit can roundtrip using QTable, though one has to enable the unit before reading.
-2024-12-28 19:11:52,613 - WARNING - The unit 'electron / s' could not be saved in native FITS format and hence will be lost to non-astropy fits readers. Within astropy, the unit can roundtrip using QTable, though one has to enable the unit before reading.
-2024-12-28 19:11:52,654 - WARNING - The unit 'electron / s' could not be saved in native FITS format and hence will be lost to non-astropy fits readers. Within astropy, the unit can roundtrip using QTable, though one has to enable the unit before reading.
-2024-12-28 19:11:52,681 - WARNING - The unit 'electron / s' could not be saved in native FITS format and hence will be lost to non-astropy fits readers. Within astropy, the unit can roundtrip using QTable, though one has to enable the unit before reading.
-2024-12-28 19:11:52,700 - WARNING - The unit 'electron / s' could not be saved in native FITS format and hence will be lost to non-astropy fits readers. Within astropy, the unit can roundtrip using QTable, though one has to enable the unit before reading.
-2024-12-28 19:11:52,726 - WARNING - The unit 'electron / s' could not be saved in native FITS format and hence will be lost to non-astropy fits readers. Within astropy, the unit can roundtrip using QTable, though one has to enable the unit before reading.
-2024-12-28 19:11:52,754 - WARNING - The unit 'electron / s' could not be saved in native FITS format and hence will be lost to non-astropy fits readers. Within astropy, the unit can roundtrip using QTable, though one has to enable the unit before reading.
-2024-12-28 19:11:52,790 - WARNING - Meta-data keyword BITPIX will be ignored since it conflicts with a FITS reserved keyword
-2024-12-28 19:11:52,815 - WARNING - Meta-data keyword NAXIS will be ignored since it conflicts with a FITS reserved keyword
-2024-12-28 19:11:52,842 - WARNING - VerifyWarning: Keyword name 'FLUX_ORIGIN' is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
-2024-12-28 19:11:52,867 - WARNING - VerifyWarning: Keyword name 'QUALITY_BITMASK' is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
-2024-12-28 19:11:52,897 - WARNING - VerifyWarning: Keyword name 'QUALITY_MASK' is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
-2024-12-28 19:11:52,932 - WARNING - Attribute `QUALITY_MASK` of type <class 'numpy.ndarray'> cannot be added to FITS Header - skipping
-2024-12-28 19:11:53,000 - DEBUG - Successfully fetched data for TIC 269400564 in 3.76 seconds
-2024-12-28 19:11:53,000 - DEBUG - Successfully processed TIC 269400564
-2024-12-28 19:11:53,000 - DEBUG - Completed processing. Success rate: 1/1
-2024-12-28 19:11:53,001 - DEBUG - Resolved path for process_lightcurve.py: /home/sm/Projects/Exoplanet_Transit_Detector/Process_Light_Curve_Module/scripts/process_lightcurve.py
-2024-12-28 19:11:53,001 - DEBUG - Triggering process_lightcurve.py...
-2024-12-28 19:11:56,130 - DEBUG - Successfully triggered process_lightcurve.py
+2024-12-29 10:58:51,205 - DEBUG - Started downloading mast:TESS/product/tess2019279210107-s0017-0000000378536210-0161-s_lc.fits.
+2024-12-29 10:58:51,339 - DEBUG - https://mast.stsci.edu:443 "HEAD /api/v0.1/Download/file?uri=mast:TESS/product/tess2019279210107-s0017-0000000378536210-0161-s_lc.fits HTTP/11" 200 0
+2024-12-29 10:58:51,341 - DEBUG - Starting new HTTPS connection (2): mast.stsci.edu:443
+2024-12-29 10:58:51,733 - DEBUG - https://mast.stsci.edu:443 "GET /api/v0.1/Download/file?uri=mast:TESS/product/tess2019279210107-s0017-0000000378536210-0161-s_lc.fits HTTP/11" 200 1831680
+2024-12-29 10:58:52,336 - DEBUG - Finished downloading.
+2024-12-29 10:58:52,336 - DEBUG - Opening /home/sm/.lightkurve/cache/mastDownload/TESS/tess2019279210107-s0017-0000000378536210-0161-s/tess2019279210107-s0017-0000000378536210-0161-s_lc.fits.
+2024-12-29 10:58:52,350 - DEBUG - Detected filetype: 'TessLightCurve'.
+2024-12-29 10:58:52,439 - INFO - 2% (319/16982) of the cadences will be ignored due to the quality mask (quality_bitmask=175).
+2024-12-29 10:58:52,570 - WARNING - The unit 'electron / s' could not be saved in native FITS format and hence will be lost to non-astropy fits readers. Within astropy, the unit can roundtrip using QTable, though one has to enable the unit before reading.
+2024-12-29 10:58:52,587 - WARNING - The unit 'electron / s' could not be saved in native FITS format and hence will be lost to non-astropy fits readers. Within astropy, the unit can roundtrip using QTable, though one has to enable the unit before reading.
+2024-12-29 10:58:52,606 - WARNING - The unit 'electron / s' could not be saved in native FITS format and hence will be lost to non-astropy fits readers. Within astropy, the unit can roundtrip using QTable, though one has to enable the unit before reading.
+2024-12-29 10:58:52,624 - WARNING - The unit 'electron / s' could not be saved in native FITS format and hence will be lost to non-astropy fits readers. Within astropy, the unit can roundtrip using QTable, though one has to enable the unit before reading.
+2024-12-29 10:58:52,643 - WARNING - The unit 'electron / s' could not be saved in native FITS format and hence will be lost to non-astropy fits readers. Within astropy, the unit can roundtrip using QTable, though one has to enable the unit before reading.
+2024-12-29 10:58:52,661 - WARNING - The unit 'electron / s' could not be saved in native FITS format and hence will be lost to non-astropy fits readers. Within astropy, the unit can roundtrip using QTable, though one has to enable the unit before reading.
+2024-12-29 10:58:52,679 - WARNING - The unit 'electron / s' could not be saved in native FITS format and hence will be lost to non-astropy fits readers. Within astropy, the unit can roundtrip using QTable, though one has to enable the unit before reading.
+2024-12-29 10:58:52,705 - WARNING - The unit 'electron / s' could not be saved in native FITS format and hence will be lost to non-astropy fits readers. Within astropy, the unit can roundtrip using QTable, though one has to enable the unit before reading.
+2024-12-29 10:58:52,736 - WARNING - Meta-data keyword BITPIX will be ignored since it conflicts with a FITS reserved keyword
+2024-12-29 10:58:52,757 - WARNING - Meta-data keyword NAXIS will be ignored since it conflicts with a FITS reserved keyword
+2024-12-29 10:58:52,777 - WARNING - VerifyWarning: Keyword name 'FLUX_ORIGIN' is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+2024-12-29 10:58:52,793 - WARNING - VerifyWarning: Keyword name 'QUALITY_BITMASK' is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+2024-12-29 10:58:52,808 - WARNING - VerifyWarning: Keyword name 'QUALITY_MASK' is greater than 8 characters or contains characters not allowed by the FITS standard; a HIERARCH card will be created.
+2024-12-29 10:58:52,826 - WARNING - Attribute `QUALITY_MASK` of type <class 'numpy.ndarray'> cannot be added to FITS Header - skipping
+2024-12-29 10:58:52,870 - DEBUG - Successfully fetched data for TIC 378536210 in 3.71 seconds
+2024-12-29 10:58:52,870 - DEBUG - Successfully processed TIC 378536210
+2024-12-29 10:58:52,870 - DEBUG - Completed processing. Success rate: 1/1
+2024-12-29 10:58:52,870 - DEBUG - Resolved path for process_lightcurve.py: /home/sm/Projects/Exoplanet_Transit_Detector/Process_Light_Curve_Module/scripts/process_lightcurve.py
+2024-12-29 10:58:52,870 - DEBUG - Triggering process_lightcurve.py...
+2024-12-29 10:58:53,753 - DEBUG - Successfully triggered process_lightcurve.py
