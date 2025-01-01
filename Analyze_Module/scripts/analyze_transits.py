@@ -4,9 +4,9 @@ import json
 import numpy as np
 from astropy.io import fits
 from datetime import datetime
-from transit_detection import run_bls  
-from db_writer import save_results  
-from trigger_visualize import notify_success  
+from transit_detection import run_bls
+# from db_writer import save_results
+# from trigger_visualize import notify_success
 
 def load_config():
     """Load the configuration from the config.json file."""
@@ -33,7 +33,7 @@ def setup_logging(log_file):
         ]
     )
 
-def analyze_transit(file_path, output_dir):
+def analyze_transit(file_path, output_dir, config):
     """Analyze a single processed FITS file for potential transits."""
     try:
         # Verify the file exists
@@ -59,7 +59,10 @@ def analyze_transit(file_path, output_dir):
 
         # Perform transit detection
         logging.debug(f"Running transit detection on {file_path}")
-        transit_results = run_bls(time, flux, flux_err)
+        transit_results = run_bls(time, flux, flux_err, config)
+
+        # Ensure output directory exists
+        os.makedirs(output_dir, exist_ok=True)
 
         # Save results to a temporary JSON file
         results_path = os.path.join(output_dir, os.path.basename(file_path).replace('.fits', '_results.json'))
@@ -67,13 +70,15 @@ def analyze_transit(file_path, output_dir):
             json.dump(transit_results, f, indent=4)
         logging.debug(f"Saved transit detection results to {results_path}")
 
-        # Save results to the database
-        save_results(transit_results)
-        logging.debug("Transit detection results saved to the database.")
+        # Comment out database and visualization triggers for now
+        # try:
+        #     save_results(transit_results)
+        #     logging.debug("Transit detection results saved to the database.")
+        # except Exception as e:
+        #     logging.error(f"Failed to save results to the database: {e}")
 
-        # Trigger visualization
-        notify_success(file_path)
-        logging.debug("Visualization module successfully triggered.")
+        # notify_success(file_path)
+        # logging.debug("Visualization module successfully triggered.")
 
         return True
 
@@ -92,19 +97,23 @@ if __name__ == "__main__":
     setup_logging(log_file)
 
     # Read file path and output directory from configuration
-    processed_fits_path = config["analyze_transits"]["processed_fits_path"]
+    processed_fits_dir = config["analyze_transits"]["processed_fits_path"]  # Fixed definition
     output_dir = config["analyze_transits"]["output_dir"]
 
+    # Ensure output directory exists
+    os.makedirs(output_dir, exist_ok=True)
+
     # Log the start of the analysis
-    logging.debug(f"Starting transit analysis for file: {processed_fits_path}")
+    logging.debug(f"Starting transit analysis for files in directory: {processed_fits_dir}")
 
-    # Run the transit analysis
-    success = analyze_transit(processed_fits_path, output_dir)
+    # Iterate over all .fits files in the directory
+    for file_name in os.listdir(processed_fits_dir):
+        file_path = os.path.join(processed_fits_dir, file_name)
+        if file_name.endswith(".fits"):
+            success = analyze_transit(file_path, output_dir, config)
 
-    # Log the completion of the analysis
-    if success:
-        logging.debug("Transit analysis completed successfully.")
-    else:
-        logging.error("Transit analysis failed.")
-
-
+            # Log the completion of the analysis
+            if success:
+                logging.debug(f"Transit analysis completed successfully for file: {file_path}")
+            else:
+                logging.error(f"Transit analysis failed for file: {file_path}")
