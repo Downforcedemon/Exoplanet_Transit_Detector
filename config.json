@@ -24,6 +24,9 @@
         "log_file": "Analyze_Module/logs/analyze_transits.log",
         "output_dir": "Analyze_Module/results/",
         "processed_fits_path": "Process_Light_Curve_Module/data/processed/"
+    },
+    "visualize_transits": {
+        "log_file": "visualize_transits_module/logs/visualize_transits.log",
+        "output_dir": "visualize_transits_module/data/"
     }
-  }
-  
+}

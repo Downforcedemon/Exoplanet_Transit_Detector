@@ -7,6 +7,8 @@ from datetime import datetime
 from transit_detection import run_bls
 # from db_writer import save_results
 # from trigger_visualize import notify_success
+import subprocess
+
 
 def load_config():
     """Load the configuration from the config.json file."""
@@ -86,6 +88,29 @@ def analyze_transit(file_path, output_dir, config):
         logging.error(f"Error analyzing FITS file {file_path}: {e}")
         return False
 
+def trigger_visualize(results_path):
+    try:
+        # Path to the generate_plot.py script
+        generate_plot_script = "visualize_transits_module/scripts/generate_plot.py"
+        if not os.path.exists(generate_plot_script):
+            logging.error(f"Generate plot script not found at {generate_plot_script}")
+            return False
+
+        # Trigger the generate_plot.py script
+        logging.debug(f"Triggering Generate Plot Module for file: {results_path}")
+        result = subprocess.run(
+            ["python", generate_plot_script, results_path],
+            check=True,
+            capture_output=True,
+            text=True
+        )
+        logging.debug(f"Generate Plot Module output: {result.stdout}")
+        return True
+
+    except subprocess.CalledProcessError as e:
+        logging.error(f"Failed to trigger Generate Plot Module: {e}")
+        return False
+
 if __name__ == "__main__":
     # Load configuration
     config = load_config()
@@ -97,7 +122,7 @@ if __name__ == "__main__":
     setup_logging(log_file)
 
     # Read file path and output directory from configuration
-    processed_fits_dir = config["analyze_transits"]["processed_fits_path"]  # Fixed definition
+    processed_fits_dir = config["analyze_transits"]["processed_fits_path"]
     output_dir = config["analyze_transits"]["output_dir"]
 
     # Ensure output directory exists
@@ -115,5 +140,13 @@ if __name__ == "__main__":
             # Log the completion of the analysis
             if success:
                 logging.debug(f"Transit analysis completed successfully for file: {file_path}")
+
+                # Trigger the visualization module using subprocess
+                if not trigger_visualize(os.path.join(output_dir, file_name.replace('.fits', '_results.json'))):
+                    logging.error(f"Failed to trigger visualization for file: {file_name}")
+                else:
+                    logging.debug(f"Visualization successfully triggered for file: {file_name}")
+
             else:
                 logging.error(f"Transit analysis failed for file: {file_path}")
+
