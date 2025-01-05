@@ -1,0 +1,8 @@
+astropy==7.0.0
+astroquery==0.4.7
+cx_Oracle==8.3.0
+lightkurve==2.5.0
+matplotlib==3.10.0
+minio==7.2.13
+numpy==2.2.1
+python-dotenv==1.0.1

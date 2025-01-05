@@ -6,15 +6,14 @@ import subprocess
 import json
 import warnings
 from datetime import datetime
+from astropy.io import fits
 import cx_Oracle  # For database operations
-
 
 def get_project_root():
     """Get the absolute path to the project's root directory."""
     current_file_path = os.path.abspath(__file__)
     project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_file_path)))
     return project_root
-
 
 def load_config():
     """Load the configuration file and adjust relative paths."""
@@ -31,7 +30,6 @@ def load_config():
     except Exception as e:
         print(f"Error loading config: {e}")
         return None
-
 
 def setup_logging(config, log_key):
     """Set up logging configuration for consistent logging in terminal and log files."""
@@ -56,7 +54,6 @@ def setup_logging(config, log_key):
         print(f"Error setting up logging: {e}")
         return False
 
-
 def fetch_star_data(star_id, config):
     """Fetch light curve data for a single star and insert metadata."""
     try:
@@ -68,26 +65,22 @@ def fetch_star_data(star_id, config):
             logging.warning(f"No light curve data found for star_id: {star_id}")
             return None
 
-        # Download the first light curve file from the search result
-        lightcurve = search_result.download()
+        # Download all light curve files from the search result
+        lightcurves = search_result.download_all()
 
-        # Define output and save path
+        # Save all light curve files
         output_dir = config["raw_data_dir"]
         os.makedirs(output_dir, exist_ok=True)
-        output_path = os.path.join(output_dir, f"{star_id.replace(' ', '_')}.fits")
-
-        # Save the light curve to FITS
-        if hasattr(lightcurve, "hdu"):
-            lightcurve.hdu.writeto(output_path, overwrite=True)
-        else:
-            logging.error(f"Cannot save light curve for {star_id}: Missing HDU attribute.")
-            return None
+        for i, lc in enumerate(lightcurves):
+            output_path = os.path.join(output_dir, f"{star_id.replace(' ', '_')}_file_{i}.fits")
+            with fits.open(lc.filename) as hdul:
+                hdul.writeto(output_path, overwrite=True)
 
         # Insert star metadata into the database
         insert_star_metadata(
             star_id=star_id,
-            name=lightcurve.meta.get("OBJECT", "Unknown"),  # Star name from metadata
-            brightness=lightcurve.meta.get("PHOTONS", 0.0),  # Example brightness extraction
+            name=lightcurves[0].meta.get("OBJECT", "Unknown"),  # Star name from metadata
+            brightness=lightcurves[0].meta.get("PHOTONS", 0.0),  # Example brightness extraction
             catalog="TESS",
             observation_time=datetime.now()  # Use current time as observation time
         )
@@ -99,7 +92,6 @@ def fetch_star_data(star_id, config):
         logging.error(f"Failed to fetch data for star_id: {star_id}. Error: {str(e)}")
         return None
 
-
 def insert_star_metadata(star_id, name, brightness, catalog, observation_time=None):
     """Insert metadata for a star into the database."""
     try:
@@ -107,6 +99,7 @@ def insert_star_metadata(star_id, name, brightness, catalog, observation_time=No
             user=os.getenv("ORACLE_USER"),
             password=os.getenv("ORACLE_PASSWORD"),
             dsn=os.getenv("ORACLE_DSN"),
+            mode = cx_Oracle.SYSDBA
         )
         cursor = connection.cursor()
         cursor.execute("SELECT COUNT(*) FROM star_metadata WHERE star_id = :star_id", {"star_id": star_id})
@@ -136,7 +129,6 @@ def insert_star_metadata(star_id, name, brightness, catalog, observation_time=No
         if "connection" in locals():
             connection.close()
 
-
 def load_star_ids(config):
     """Load star IDs from the input file."""
     try:
@@ -145,7 +137,6 @@ def load_star_ids(config):
     except Exception as e:
         logging.error(f"Error loading star IDs: {e}")
         return None
-
 
 def trigger_next_module():
     """Trigger the next module in the pipeline if it exists."""
@@ -162,7 +153,6 @@ def trigger_next_module():
     except subprocess.CalledProcessError as e:
         logging.error(f"Error triggering process_lightcurve.py: {e}")
         return False
-
 
 def main():
     """Main function to process all stars and trigger next module."""
@@ -193,7 +183,6 @@ def main():
     except Exception as e:
         logging.error(f"Unexpected error in main: {e}")
         return False
-
 
 if __name__ == "__main__":
     success = main()
