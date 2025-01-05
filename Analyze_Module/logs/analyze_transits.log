@@ -1,103 +1,43 @@
-2025-01-01 18:06:28,941 - DEBUG - Starting transit analysis for files in directory: Process_Light_Curve_Module/data/processed/
-2025-01-01 18:06:28,946 - WARNING - File may have been truncated: actual file length (1722240) is smaller than the expected size (13930560)
-2025-01-01 18:06:28,953 - WARNING - VerifyWarning: Invalid keyword for column 1: The repeat count of the column format 'TIME' for column 'D' is fewer than the number of elements per the TDIM argument '(2)'.  The invalid TDIMn value will be ignored for the purpose of formatting this column.
-2025-01-01 18:06:28,957 - DEBUG - Running transit detection on Process_Light_Curve_Module/data/processed/TIC_435923755_processed.fits
-2025-01-01 18:06:28,957 - DEBUG - Starting Box Least Squares (BLS) transit detection.
-2025-01-01 18:06:28,957 - DEBUG - BLS parameters: Period Range = [0.5, 30], Duration Range = [0.01, 0.1]
-2025-01-01 18:12:31,791 - DEBUG - BLS results: Period = 0.200000591717727, Duration = 0.01, Depth = 719.2607189617329, Power = 435350.77818275156
-2025-01-01 18:12:31,795 - DEBUG - Saved transit detection results to Analyze_Module/results/TIC_435923755_processed_results.json
-2025-01-01 18:12:31,796 - DEBUG - Transit analysis completed successfully for file: Process_Light_Curve_Module/data/processed/TIC_435923755_processed.fits
-2025-01-01 18:12:31,796 - DEBUG - Triggering Generate Plot Module for file: Analyze_Module/results/TIC_435923755_processed_results.json
-2025-01-01 18:12:33,262 - DEBUG - Generate Plot Module output: 
-2025-01-01 18:12:33,262 - DEBUG - Visualization successfully triggered for file: TIC_435923755_processed.fits
-2025-01-01 18:23:40,781 - DEBUG - Starting transit analysis for files in directory: Process_Light_Curve_Module/data/processed/
-2025-01-01 18:23:40,796 - WARNING - File may have been truncated: actual file length (259200) is smaller than the expected size (1857600)
-2025-01-01 18:23:40,813 - WARNING - VerifyWarning: Invalid keyword for column 1: The repeat count of the column format 'TIME' for column 'D' is fewer than the number of elements per the TDIM argument '(2)'.  The invalid TDIMn value will be ignored for the purpose of formatting this column.
-2025-01-01 18:23:40,824 - DEBUG - Running transit detection on Process_Light_Curve_Module/data/processed/TIC_90702417_processed.fits
-2025-01-01 18:23:40,824 - DEBUG - Starting Box Least Squares (BLS) transit detection.
-2025-01-01 18:23:40,824 - DEBUG - BLS parameters: Period Range = [0.5, 30], Duration Range = [0.01, 0.1]
-2025-01-01 18:24:52,603 - DEBUG - BLS results: Period = 0.2499905696287177, Duration = 0.01, Depth = 11179.144210166849, Power = 57014186.80569959
-2025-01-01 18:24:52,606 - DEBUG - Saved transit detection results to Analyze_Module/results/TIC_90702417_processed_results.json
-2025-01-01 18:24:52,607 - DEBUG - Transit analysis completed successfully for file: Process_Light_Curve_Module/data/processed/TIC_90702417_processed.fits
-2025-01-01 18:24:52,607 - DEBUG - Triggering Generate Plot Module for file: Analyze_Module/results/TIC_90702417_processed_results.json
-2025-01-01 18:24:53,757 - DEBUG - Generate Plot Module output: 
-2025-01-01 18:24:53,758 - DEBUG - Visualization successfully triggered for file: TIC_90702417_processed.fits
-2025-01-01 18:24:53,763 - WARNING - File may have been truncated: actual file length (1722240) is smaller than the expected size (13930560)
-2025-01-01 18:24:53,769 - WARNING - VerifyWarning: Invalid keyword for column 1: The repeat count of the column format 'TIME' for column 'D' is fewer than the number of elements per the TDIM argument '(2)'.  The invalid TDIMn value will be ignored for the purpose of formatting this column.
-2025-01-01 18:24:53,774 - DEBUG - Running transit detection on Process_Light_Curve_Module/data/processed/TIC_435923755_processed.fits
-2025-01-01 18:24:53,774 - DEBUG - Starting Box Least Squares (BLS) transit detection.
-2025-01-01 18:24:53,775 - DEBUG - BLS parameters: Period Range = [0.5, 30], Duration Range = [0.01, 0.1]
-2025-01-01 18:31:39,458 - DEBUG - BLS results: Period = 0.200000591717727, Duration = 0.01, Depth = 719.2607189617329, Power = 435350.77818275156
-2025-01-01 18:31:39,462 - DEBUG - Saved transit detection results to Analyze_Module/results/TIC_435923755_processed_results.json
-2025-01-01 18:31:39,462 - DEBUG - Transit analysis completed successfully for file: Process_Light_Curve_Module/data/processed/TIC_435923755_processed.fits
-2025-01-01 18:31:39,462 - DEBUG - Triggering Generate Plot Module for file: Analyze_Module/results/TIC_435923755_processed_results.json
-2025-01-01 18:31:40,434 - DEBUG - Generate Plot Module output: 
-2025-01-01 18:31:40,434 - DEBUG - Visualization successfully triggered for file: TIC_435923755_processed.fits
-2025-01-01 18:31:41,306 - DEBUG - Starting transit analysis for files in directory: Process_Light_Curve_Module/data/processed/
-2025-01-01 18:31:41,313 - WARNING - File may have been truncated: actual file length (293760) is smaller than the expected size (2148480)
-2025-01-01 18:31:41,320 - WARNING - VerifyWarning: Invalid keyword for column 1: The repeat count of the column format 'TIME' for column 'D' is fewer than the number of elements per the TDIM argument '(2)'.  The invalid TDIMn value will be ignored for the purpose of formatting this column.
-2025-01-01 18:31:41,322 - DEBUG - Running transit detection on Process_Light_Curve_Module/data/processed/TIC_77108968_processed.fits
-2025-01-01 18:31:41,322 - DEBUG - Starting Box Least Squares (BLS) transit detection.
-2025-01-01 18:31:41,322 - DEBUG - BLS parameters: Period Range = [0.5, 30], Duration Range = [0.01, 0.1]
-2025-01-01 18:32:46,469 - DEBUG - BLS results: Period = 0.2258188438476057, Duration = 0.1, Depth = 286.5749629159287, Power = 42160.327570628426
-2025-01-01 18:32:46,472 - DEBUG - Saved transit detection results to Analyze_Module/results/TIC_77108968_processed_results.json
-2025-01-01 18:32:46,472 - DEBUG - Transit analysis completed successfully for file: Process_Light_Curve_Module/data/processed/TIC_77108968_processed.fits
-2025-01-01 18:32:46,473 - DEBUG - Triggering Generate Plot Module for file: Analyze_Module/results/TIC_77108968_processed_results.json
-2025-01-01 18:32:47,470 - DEBUG - Generate Plot Module output: 
-2025-01-01 18:32:47,470 - DEBUG - Visualization successfully triggered for file: TIC_77108968_processed.fits
-2025-01-01 18:32:47,475 - WARNING - File may have been truncated: actual file length (259200) is smaller than the expected size (1857600)
-2025-01-01 18:32:47,481 - WARNING - VerifyWarning: Invalid keyword for column 1: The repeat count of the column format 'TIME' for column 'D' is fewer than the number of elements per the TDIM argument '(2)'.  The invalid TDIMn value will be ignored for the purpose of formatting this column.
-2025-01-01 18:32:47,483 - DEBUG - Running transit detection on Process_Light_Curve_Module/data/processed/TIC_90702417_processed.fits
-2025-01-01 18:32:47,484 - DEBUG - Starting Box Least Squares (BLS) transit detection.
-2025-01-01 18:32:47,484 - DEBUG - BLS parameters: Period Range = [0.5, 30], Duration Range = [0.01, 0.1]
-2025-01-01 18:33:41,413 - DEBUG - BLS results: Period = 0.2499905696287177, Duration = 0.01, Depth = 11179.144210166849, Power = 57014186.80569959
-2025-01-01 18:33:41,417 - DEBUG - Saved transit detection results to Analyze_Module/results/TIC_90702417_processed_results.json
-2025-01-01 18:33:41,418 - DEBUG - Transit analysis completed successfully for file: Process_Light_Curve_Module/data/processed/TIC_90702417_processed.fits
-2025-01-01 18:33:41,418 - DEBUG - Triggering Generate Plot Module for file: Analyze_Module/results/TIC_90702417_processed_results.json
-2025-01-01 18:33:42,881 - DEBUG - Generate Plot Module output: 
-2025-01-01 18:33:42,881 - DEBUG - Visualization successfully triggered for file: TIC_90702417_processed.fits
-2025-01-01 18:33:42,892 - WARNING - File may have been truncated: actual file length (1722240) is smaller than the expected size (13930560)
-2025-01-01 18:33:42,904 - WARNING - VerifyWarning: Invalid keyword for column 1: The repeat count of the column format 'TIME' for column 'D' is fewer than the number of elements per the TDIM argument '(2)'.  The invalid TDIMn value will be ignored for the purpose of formatting this column.
-2025-01-01 18:33:42,913 - DEBUG - Running transit detection on Process_Light_Curve_Module/data/processed/TIC_435923755_processed.fits
-2025-01-01 18:33:42,913 - DEBUG - Starting Box Least Squares (BLS) transit detection.
-2025-01-01 18:33:42,913 - DEBUG - BLS parameters: Period Range = [0.5, 30], Duration Range = [0.01, 0.1]
-2025-01-01 18:39:49,452 - DEBUG - BLS results: Period = 0.200000591717727, Duration = 0.01, Depth = 719.2607189617329, Power = 435350.77818275156
-2025-01-01 18:39:49,455 - DEBUG - Saved transit detection results to Analyze_Module/results/TIC_435923755_processed_results.json
-2025-01-01 18:39:49,455 - DEBUG - Transit analysis completed successfully for file: Process_Light_Curve_Module/data/processed/TIC_435923755_processed.fits
-2025-01-01 18:39:49,456 - DEBUG - Triggering Generate Plot Module for file: Analyze_Module/results/TIC_435923755_processed_results.json
-2025-01-01 18:39:50,733 - DEBUG - Generate Plot Module output: 
-2025-01-01 18:39:50,734 - DEBUG - Visualization successfully triggered for file: TIC_435923755_processed.fits
-2025-01-01 18:39:52,021 - DEBUG - Starting transit analysis for files in directory: Process_Light_Curve_Module/data/processed/
-2025-01-01 18:39:52,027 - WARNING - File may have been truncated: actual file length (293760) is smaller than the expected size (2148480)
-2025-01-01 18:39:52,033 - WARNING - VerifyWarning: Invalid keyword for column 1: The repeat count of the column format 'TIME' for column 'D' is fewer than the number of elements per the TDIM argument '(2)'.  The invalid TDIMn value will be ignored for the purpose of formatting this column.
-2025-01-01 18:39:52,036 - DEBUG - Running transit detection on Process_Light_Curve_Module/data/processed/TIC_77108968_processed.fits
-2025-01-01 18:39:52,036 - DEBUG - Starting Box Least Squares (BLS) transit detection.
-2025-01-01 18:39:52,036 - DEBUG - BLS parameters: Period Range = [0.5, 30], Duration Range = [0.01, 0.1]
-2025-01-01 18:40:51,555 - DEBUG - BLS results: Period = 0.2258188438476057, Duration = 0.1, Depth = 286.5749629159287, Power = 42160.327570628426
-2025-01-01 18:40:51,558 - DEBUG - Saved transit detection results to Analyze_Module/results/TIC_77108968_processed_results.json
-2025-01-01 18:40:51,558 - DEBUG - Transit analysis completed successfully for file: Process_Light_Curve_Module/data/processed/TIC_77108968_processed.fits
-2025-01-01 18:40:51,559 - DEBUG - Triggering Generate Plot Module for file: Analyze_Module/results/TIC_77108968_processed_results.json
-2025-01-01 18:40:53,094 - DEBUG - Generate Plot Module output: 
-2025-01-01 18:40:53,094 - DEBUG - Visualization successfully triggered for file: TIC_77108968_processed.fits
-2025-01-01 18:40:53,103 - WARNING - File may have been truncated: actual file length (259200) is smaller than the expected size (1857600)
-2025-01-01 18:40:53,113 - WARNING - VerifyWarning: Invalid keyword for column 1: The repeat count of the column format 'TIME' for column 'D' is fewer than the number of elements per the TDIM argument '(2)'.  The invalid TDIMn value will be ignored for the purpose of formatting this column.
-2025-01-01 18:40:53,116 - DEBUG - Running transit detection on Process_Light_Curve_Module/data/processed/TIC_90702417_processed.fits
-2025-01-01 18:40:53,116 - DEBUG - Starting Box Least Squares (BLS) transit detection.
-2025-01-01 18:40:53,116 - DEBUG - BLS parameters: Period Range = [0.5, 30], Duration Range = [0.01, 0.1]
-2025-01-01 18:41:55,313 - DEBUG - BLS results: Period = 0.2499905696287177, Duration = 0.01, Depth = 11179.144210166849, Power = 57014186.80569959
-2025-01-01 18:41:55,315 - DEBUG - Saved transit detection results to Analyze_Module/results/TIC_90702417_processed_results.json
-2025-01-01 18:41:55,316 - DEBUG - Transit analysis completed successfully for file: Process_Light_Curve_Module/data/processed/TIC_90702417_processed.fits
-2025-01-01 18:41:55,316 - DEBUG - Triggering Generate Plot Module for file: Analyze_Module/results/TIC_90702417_processed_results.json
-2025-01-01 18:41:56,514 - DEBUG - Generate Plot Module output: 
-2025-01-01 18:41:56,514 - DEBUG - Visualization successfully triggered for file: TIC_90702417_processed.fits
-2025-01-01 18:41:56,521 - WARNING - File may have been truncated: actual file length (1722240) is smaller than the expected size (13930560)
-2025-01-01 18:41:56,534 - WARNING - VerifyWarning: Invalid keyword for column 1: The repeat count of the column format 'TIME' for column 'D' is fewer than the number of elements per the TDIM argument '(2)'.  The invalid TDIMn value will be ignored for the purpose of formatting this column.
-2025-01-01 18:41:56,542 - DEBUG - Running transit detection on Process_Light_Curve_Module/data/processed/TIC_435923755_processed.fits
-2025-01-01 18:41:56,542 - DEBUG - Starting Box Least Squares (BLS) transit detection.
-2025-01-01 18:41:56,542 - DEBUG - BLS parameters: Period Range = [0.5, 30], Duration Range = [0.01, 0.1]
-2025-01-01 18:48:07,230 - DEBUG - BLS results: Period = 0.200000591717727, Duration = 0.01, Depth = 719.2607189617329, Power = 435350.77818275156
-2025-01-01 18:48:07,234 - DEBUG - Saved transit detection results to Analyze_Module/results/TIC_435923755_processed_results.json
-2025-01-01 18:48:07,234 - DEBUG - Transit analysis completed successfully for file: Process_Light_Curve_Module/data/processed/TIC_435923755_processed.fits
-2025-01-01 18:48:07,234 - DEBUG - Triggering Generate Plot Module for file: Analyze_Module/results/TIC_435923755_processed_results.json
-2025-01-01 18:48:08,230 - DEBUG - Generate Plot Module output: 
-2025-01-01 18:48:08,230 - DEBUG - Visualization successfully triggered for file: TIC_435923755_processed.fits
+2025-01-04 21:11:15,207 - DEBUG - Starting transit analysis for files in directory: Process_Light_Curve_Module/data/processed/
+2025-01-04 21:11:15,213 - WARNING - File may have been truncated: actual file length (299520) is smaller than the expected size (1782720)
+2025-01-04 21:11:15,221 - DEBUG - Running transit detection on Process_Light_Curve_Module/data/processed/TIC_138074750_processed.fits
+2025-01-04 21:11:15,221 - DEBUG - Starting Box Least Squares (BLS) transit detection.
+2025-01-04 21:11:15,222 - DEBUG - BLS parameters: Period Range = [0.5, 30], Duration Range = [0.01, 0.1]
+2025-01-04 21:12:29,730 - DEBUG - BLS results: Period = 13.157895427407079, Duration = 0.1, Depth = 8722.489783350993, Power = 905073.6563369748
+2025-01-04 21:12:29,733 - DEBUG - Saved transit detection results to Analyze_Module/results/TIC_138074750_processed_results.json
+2025-01-04 21:12:29,733 - DEBUG - Transit analysis completed successfully for file: Process_Light_Curve_Module/data/processed/TIC_138074750_processed.fits
+2025-01-04 21:12:29,733 - DEBUG - Triggering Generate Plot Module for file: Analyze_Module/results/TIC_138074750_processed_results.json
+2025-01-04 21:12:31,243 - DEBUG - Generate Plot Module output: 
+2025-01-04 21:12:31,243 - DEBUG - Visualization successfully triggered for file: TIC_138074750_processed.fits
+2025-01-04 21:25:37,488 - DEBUG - Starting transit analysis for files in directory: Process_Light_Curve_Module/data/processed/
+2025-01-04 21:25:37,497 - WARNING - File may have been truncated: actual file length (299520) is smaller than the expected size (1782720)
+2025-01-04 21:25:37,503 - DEBUG - Running transit detection on Process_Light_Curve_Module/data/processed/TIC_138074750_processed.fits
+2025-01-04 21:25:37,503 - DEBUG - Starting Box Least Squares (BLS) transit detection.
+2025-01-04 21:25:37,503 - DEBUG - BLS parameters: Period Range = [0.5, 30], Duration Range = [0.01, 0.1]
+2025-01-04 21:26:39,973 - DEBUG - BLS results: Period = 13.157895427407079, Duration = 0.1, Depth = 8722.489783350993, Power = 905073.6563369748
+2025-01-04 21:26:39,975 - DEBUG - Saved transit detection results to Analyze_Module/results/TIC_138074750_processed_results.json
+2025-01-04 21:26:39,976 - DEBUG - Transit analysis completed successfully for file: Process_Light_Curve_Module/data/processed/TIC_138074750_processed.fits
+2025-01-04 21:26:39,976 - DEBUG - Triggering Generate Plot Module for file: Analyze_Module/results/TIC_138074750_processed_results.json
+2025-01-04 21:26:41,314 - DEBUG - Generate Plot Module output: 
+2025-01-04 21:26:41,314 - DEBUG - Visualization successfully triggered for file: TIC_138074750_processed.fits
+2025-01-04 21:26:42,220 - DEBUG - Starting transit analysis for files in directory: Process_Light_Curve_Module/data/processed/
+2025-01-04 21:26:42,226 - WARNING - File may have been truncated: actual file length (299520) is smaller than the expected size (1782720)
+2025-01-04 21:26:42,230 - DEBUG - Running transit detection on Process_Light_Curve_Module/data/processed/TIC_138074750_processed.fits
+2025-01-04 21:26:42,230 - DEBUG - Starting Box Least Squares (BLS) transit detection.
+2025-01-04 21:26:42,231 - DEBUG - BLS parameters: Period Range = [0.5, 30], Duration Range = [0.01, 0.1]
+2025-01-04 21:27:46,643 - DEBUG - BLS results: Period = 13.157895427407079, Duration = 0.1, Depth = 8722.489783350993, Power = 905073.6563369748
+2025-01-04 21:27:46,645 - DEBUG - Saved transit detection results to Analyze_Module/results/TIC_138074750_processed_results.json
+2025-01-04 21:27:46,646 - DEBUG - Transit analysis completed successfully for file: Process_Light_Curve_Module/data/processed/TIC_138074750_processed.fits
+2025-01-04 21:27:46,646 - DEBUG - Triggering Generate Plot Module for file: Analyze_Module/results/TIC_138074750_processed_results.json
+2025-01-04 21:27:47,986 - DEBUG - Generate Plot Module output: 
+2025-01-04 21:27:47,986 - DEBUG - Visualization successfully triggered for file: TIC_138074750_processed.fits
+2025-01-04 21:27:47,991 - WARNING - File may have been truncated: actual file length (273600) is smaller than the expected size (1615680)
+2025-01-04 21:27:47,995 - DEBUG - Running transit detection on Process_Light_Curve_Module/data/processed/TIC_84326686_processed.fits
+2025-01-04 21:27:47,995 - DEBUG - Starting Box Least Squares (BLS) transit detection.
+2025-01-04 21:27:47,995 - DEBUG - BLS parameters: Period Range = [0.5, 30], Duration Range = [0.01, 0.1]
+2025-01-04 21:28:36,116 - DEBUG - BLS results: Period = 5.4663135874579565, Duration = 0.1, Depth = 1017.5571734573997, Power = 10694.652611986281
+2025-01-04 21:28:36,119 - DEBUG - Saved transit detection results to Analyze_Module/results/TIC_84326686_processed_results.json
+2025-01-04 21:28:36,119 - DEBUG - Transit analysis completed successfully for file: Process_Light_Curve_Module/data/processed/TIC_84326686_processed.fits
+2025-01-04 21:28:36,119 - DEBUG - Triggering Generate Plot Module for file: Analyze_Module/results/TIC_84326686_processed_results.json
+2025-01-04 21:28:37,460 - DEBUG - Generate Plot Module output: 
+2025-01-04 21:28:37,460 - DEBUG - Visualization successfully triggered for file: TIC_84326686_processed.fits

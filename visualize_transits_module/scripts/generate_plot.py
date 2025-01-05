@@ -3,6 +3,11 @@ import json
 import matplotlib.pyplot as plt
 import logging
 import sys
+import subprocess
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Set up logging for this module
 LOG_FILE = "visualize_transits_module/logs/visualize_transits.log"
@@ -51,6 +56,19 @@ def generate_visualization(results_path):
         logging.error(f"Error generating visualization: {e}")
         raise
 
+def trigger_db_writer(tic_id):
+    try:
+        logging.info(f"Triggering db_writer for TIC ID: {tic_id}")
+        subprocess.run(
+            ["python",
+            "visualize_transits_module/scripts/db_writer.py",
+            tic_id], 
+            check=True)
+        logging.info(f"Successfully triggered db_writer for TIC ID: {tic_id}")
+    except subprocess.CalledProcessError as e:
+        logging.error(f"Error triggering db_writer: {e}")
+        raise
+
 if __name__ == "__main__":
     import sys
     if len(sys.argv) != 2:
@@ -62,8 +80,26 @@ if __name__ == "__main__":
         exit(1)
 
     # Call the visualization function
-    generate_visualization(results_path)
+    try:
+        visualization_path = generate_visualization(results_path)
+        logging.info("Visualization generated successfully.")
 
-    logging.info("Visualization completed successfully.")
+        # Extract TIC ID from the filename
+        filename = os.path.basename(results_path)
+        if filename.startswith("TIC") and "_processed_results.json" in filename:
+            tic_id = filename.split("_processed_results.json")[0]
+            logging
+        else:
+            raise ValueError(f"Invalid filename format: {filename}")
+
+        # Trigger db_writer
+        trigger_db_writer(tic_id)
+        logging.info("db_writer triggered successfully.")
+
+    except Exception as e:
+        logging.error(f"Error generating visualization: {e}")
+        exit(1)
+
     exit(0)
+    
     
